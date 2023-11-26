@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update
-router.patch('/', getSubscriber, async (req, res) => {
+router.patch('/:id', getSubscriber, async (req, res) => {
     
     if (req.body.name != null) {
         res.subscriber.name = req.body.name
@@ -53,14 +53,14 @@ router.patch('/', getSubscriber, async (req, res) => {
 // Delete
 router.delete('/:id', getSubscriber, async (req, res) => {
     try {
-      await res.subscriber.remove()
+      await res.subscriber.deleteOne()
       res.json({ message: 'Deleted Subscriber' })
     } catch (err) {
       res.status(500).json({ message: err.message })
     }
   })
   
-  async function getSubscriber(req, res, next) {
+async function getSubscriber(req, res, next) {
     let subscriber
     try {
       subscriber = await Subscriber.findById(req.params.id)
