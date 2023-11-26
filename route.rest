@@ -20,4 +20,10 @@ Content-Type: application/json
 delete http://localhost:3000/subscribers/655d10eae255580ba2170baf
 
 ###
-PATCH  http://localhost:3000/subscribers/655d10eae255580ba2170baf
+PATCH  http://localhost:3000/subscribers/655d0f0b42a9a552f6d5d55e
+Content-Type: application/json
+
+ {
+      "name": "alozno",
+      "subscribedToChannel": "alonzo TV"
+    }
