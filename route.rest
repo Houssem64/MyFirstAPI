@@ -2,7 +2,7 @@ GET http://localhost:3000/subscribers
 
 ###
 
-GET http://localhost:3000/subscribers/655d0f0b42a9a552f6d5d55e
+GET http://localhost:3000/subscribers/6563dd4e91abbcfa4d5bb971
 
 ###
 
@@ -10,17 +10,17 @@ POST http://localhost:3000/subscribers
 Content-Type: application/json
 
  {
-      "name": "John trret",
-      "subscribedToChannel": "reterters"
+      "name": "test",
+      "subscribedToChannel": "test"
     }
 
 
 
 ###
-delete http://localhost:3000/subscribers/655d10eae255580ba2170baf
+DELETE http://localhost:3000/subscribers/655d14c2e255580ba2170bb1
 
 ###
-PATCH  http://localhost:3000/subscribers/655d0f0b42a9a552f6d5d55e
+PATCH  http://localhost:3000/subscribers/6563dd4e91abbcfa4d5bb971
 Content-Type: application/json
 
  {
